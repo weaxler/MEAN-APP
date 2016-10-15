@@ -1,0 +1,11 @@
+typings/**
+node_modules
+**/*npm-debug.log.*
+*.js
+*.js.map
+public/js/**
+!systemjs.config.js
+!typings/typings.d.ts
+!app.js
+!gulpfile.js
+!systemjs.builder.js
