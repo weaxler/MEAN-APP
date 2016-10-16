@@ -9,11 +9,15 @@ import {Message} from "./messages/message";
       </div>
       <div class="row">
         <section class="col-md-8 col-md-offset-2">
-          <my-message [message]="message" (editClicked)="message.content = $event"></my-message>
+          <my-message *ngFor="let message of messages"  [message]="message" (editClicked)="message.content = $event"></my-message>
       </section>
     </div>
   `,
 })
 export class AppComponent { 
-  message: Message = new Message('A new Message', null, 'Dan Andersen', null ); 
+  messages: Message[] = [
+    new Message('A new Message', null, 'Dan Andersen', null ),
+    new Message('Another Message', null, 'Lena Kofod Andersen', null ),
+    new Message('A third Message', null, 'Filippa Olivia Kodod Andersen', null )
+  ]; 
 }

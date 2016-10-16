@@ -38,7 +38,8 @@ import {Message} from "./message";
 })
 export class MessageComponent{
     @Input() message: Message;
-    @Output() editClicked = new EventEmitter <string>()
+    @Output() editClicked = new EventEmitter <string>();
+  
     onClick(){
       this.editClicked.emit('Changed');
     }
